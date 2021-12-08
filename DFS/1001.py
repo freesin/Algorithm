@@ -10,3 +10,5 @@ while True:
     if n == 1:
         break
 print(count)
+
+
