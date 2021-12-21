@@ -1,9 +1,19 @@
-n, m = map(int, input().split())
-coin_list = []
-for i in n:
-    coin_list.append()
+import sys
+input = sys.stdin.readline
+
+n, k = map(int, input().split())
+coin_list = [int(input()) for _ in range(n)]
+ans = 0
+for i in range(n-1, -1 , -1):
+    ans += k // coin_list[i]
+
+    k %= coin_list[i]
+
+print(ans)
 
 
+# while 문을 돌리려는 방향성이 완전 틀림
+# 정답소스는 점화식을 세워 계산
 
 
 # 준규가 가지고 있는 동전은 총 N종류이고, 각각의 동전을 매우 많이 가지고 있다.
@@ -17,3 +27,5 @@ for i in n:
 #
 # 출력
 # 첫째 줄에 K원을 만드는데 필요한 동전 개수의 최솟값을 출력한다.
+
+#https://www.acmicpc.net/problem/11047 동전 0
