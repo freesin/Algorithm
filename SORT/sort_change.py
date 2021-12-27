@@ -10,5 +10,6 @@ for i in range(k):
         a[i], b[i] = b[i], a[i]
     else:
         break
+        
 
 print(sum(a))
