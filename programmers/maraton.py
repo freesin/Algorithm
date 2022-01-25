@@ -1,5 +1,9 @@
-participant = ["leo", "kiki", "eden"]
-completion = ["eden", "kiki"]
+import collections
 
 
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
 
+
+#https://programmers.co.kr/learn/courses/30/lessons/42576
