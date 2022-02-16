@@ -11,4 +11,3 @@ def solution(array, commands):
     return a
 
 print(solution(array, commands))
-   
