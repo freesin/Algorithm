@@ -6,4 +6,4 @@ def solution(participant, completion):
     return list(answer.keys())[0]
 
 
-#https://programmers.co.kr/learn/courses/30/lessons/42576
+#https://programmers.co.kr/learn/courses/30/lessons/42576 
