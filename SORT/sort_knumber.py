@@ -9,12 +9,22 @@
 
 # array	commands	return
 # [1, 5, 2, 6, 3, 7, 4]	[[2, 5, 3], [4, 4, 1], [1, 7, 3]]	[5, 6, 3]
-
-def solution(array, commands):
-    answer = []
-    return answer
-
-
 array = [1, 5, 2, 6, 3, 7, 4]
 commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+def solution(array, commands):
+    answer = []
+    for b in commands:
+        new_ary = []
+        i = b[0]
+        j = b[1]
+        k = b[2]
+        for a, v in enumerate(array):
+            if i - 1 <= a <= j - 1:
+                new_ary.append(v)
+        new_ary.sort()
+        answer.append(new_ary[k - 1])
+    return answer
+
+print(solution(array, commands))
+
 
