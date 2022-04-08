@@ -21,7 +21,21 @@ def solution(lottos, win_nums):
     return answer
 
 
-def solution(lottos, win_nums):
+def solution1(lottos, win_nums):    #조금더 발전 된 소스
+    answer = []
+    same_count = 0
+    rank_list = {'0': 6, '1': 6, '2': 5, '3': 4, '4': 3, '5': 2, '6': 1}
+    zero_count = lottos.count(0)
+    print('0개수 ' + str(zero_count))
+    for i in win_nums:
+        if i in lottos:
+            same_count += 1
+    answer.append(rank_list[str(same_count + zero_count)])
+    answer.append(rank_list[str(same_count)])
+    return answer
+
+
+def solution2(lottos, win_nums):    #참고 소스
 
     rank=[6,6,5,4,3,2,1]
 
