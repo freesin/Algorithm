@@ -1,7 +1,6 @@
 n, m = map(int, input().split())
-ans_list = []
-ans = 0
+ans = []
 for _ in range(n):
     data = list(map(int, input().split()))
-    ans_list.append(min(data))
-print(max(ans_list))
+    ans.append(min(data))
+print(max(ans))
