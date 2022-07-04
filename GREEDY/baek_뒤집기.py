@@ -11,7 +11,7 @@ def solution(people, limit):
             if i[1] in people:
                 people.remove(i[1])
     answer = 0
-    
+
     return people
 
 
